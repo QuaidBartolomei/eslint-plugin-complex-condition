@@ -9,10 +9,20 @@ const tester = new RuleTester({
 })
 
 tester.run('complex-condition', rule, {
-  valid: ['if (a) {}'],
+  valid: [
+    'if (a) {}',
+    'if (a && b) {}',
+    // ternary
+    'a ? b : c',
+    'a && b ? c : d',
+  ],
   invalid: [
     {
       code: 'if (a && b && c) {}', //
+      errors: [{ messageId: 'complexCondition' }],
+    },
+    {
+      code: 'a && b && c ? d : e', //
       errors: [{ messageId: 'complexCondition' }],
     },
   ],

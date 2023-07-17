@@ -45,6 +45,16 @@ const rule: Rule.RuleModule = {
           })
         }
       },
+      // ternary
+      ConditionalExpression: (node) => {
+        const count = countBinary(node.test as unknown as Node)
+        if (count > 2) {
+          context.report({
+            node,
+            messageId: 'complexCondition',
+          })
+        }
+      },
     }
   },
 }
