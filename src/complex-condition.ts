@@ -1,4 +1,4 @@
-import { Rule } from 'eslint';
+import { Rule } from 'eslint'
 
 export function complexCondition(context: Rule.RuleContext): Rule.RuleListener {
   return {
@@ -6,7 +6,7 @@ export function complexCondition(context: Rule.RuleContext): Rule.RuleListener {
       context.report({
         node,
         message: 'Are you sure about this?',
-      });
+      })
     },
-  };
+  }
 }
