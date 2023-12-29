@@ -2,15 +2,21 @@ module.exports = {
   root: true,
   env: {
     node: true,
+    es6: true,
   },
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
   parserOptions: {
-    ecmaVersion: 12,
+    ecmaVersion: 2020,
     sourceType: 'module',
   },
+  extends: ['eslint:recommended'],
+
   overrides: [
+    {
+      files: '**/*.ts',
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint'],
+      extends: ['plugin:@typescript-eslint/recommended'],
+    },
     {
       files: 'scripts/**/*.ts',
       rules: {
