@@ -9,13 +9,13 @@
     "eslintplugin",
     "eslint-plugin"
   ],
-  "homepage": "https://github.com/???/eslint-plugin-xxxx#readme",
+  "homepage": "https://github.com/QuaidBartolomei/eslint-plugin-complex-condition#readme",
   "bugs": {
-    "url": "https://github.com/???/eslint-plugin-xxxx/issues"
+    "url": "https://github.com/QuaidBartolomei/eslint-plugin-complex-condition/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/???/eslint-plugin-xxxx.git"
+    "url": "git+https://github.com/QuaidBartolomei/eslint-plugin-complex-condition.git"
   },
   "license": "MIT",
   "author": "",
